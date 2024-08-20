@@ -1,0 +1,47 @@
+[
+    {
+        "id": "d24f5711-2eb7-4834-8e1b-a791696f1ce3",
+        "title": "My First Post",
+        "description": "This is my first post",
+        "content": "This is the content of my first post",
+        "fName": "John Doe",
+        "domain": "example",
+        "date": "2023-02-20"
+    },
+    {
+        "id": "d24f5711-2eb7-4834-8e1b-a791696f1ce2",
+        "title": "My Second Post",
+        "description": "This is my second post",
+        "content": "This is the content of my second post",
+        "fName": "Jane Doe",
+        "domain": "door",
+        "date": "2023-02-21"
+    },
+    {
+        "id": "d24f5711-2eb7-4834-8e1b-a791696f1ce1",
+        "title": "My THird Post",
+        "description": "This is my second post",
+        "content": "This is the content of my second post",
+        "fName": "Jane Doe",
+        "domain": "example.com",
+        "date": "2023-02-21"
+    },
+    {
+        "id": "e2c7d0f3-e2c2-4e90-89a1-5f059a25fd03",
+        "title": "My Fourth Post",
+        "description": "This is my second post",
+        "content": "This is the content of my second post",
+        "fName": "Jane Doe",
+        "domain": "gand ka ched",
+        "date": "0222-02-01"
+    },
+    {
+        "id": "f246ea52-8a7d-4090-98ed-5b2b7a76d6bd",
+        "title": "My First Post",
+        "description": "asdsad",
+        "content": "asd",
+        "fName": "sad",
+        "domain": "fs",
+        "date": "1111-02-02"
+    }
+]
