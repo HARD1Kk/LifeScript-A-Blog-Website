@@ -1,23 +1,25 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+       
 </head>
-<header class="bg-gray-800 text-white ">
-    <nav class="container mx-auto flex justify-between p-4 w-full">
-        <div class="text-xl font-bold">
+<header class="sticky top-0 bg-[#893f71] text-black bg-opacity-0 transition duration-300 ease-in-out">
+    <nav class="container mx-auto flex justify-between ml-0 p-4 w-full">
+        <div class="text-xl font-bold p-3">
             <a href="/">Blogzz</a>
         </div>
-        <div class="justify-between items-center">
-            <input type="checkbox" id="mobile-menu-toggle" class="hidden">
-            <label for="mobile-menu-toggle" class="lg:hidden block">
+        <div class="justify-between p-3 items-center">
+            <button id="mobile-menu-button" class="lg:hidden block">
                 <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-            </label>
+            </button>
             <ul class="hidden lg:flex justify-center space-x-4">
                 <li><a href="/" class="hover:text-gray-400 p-4">Home</a></li>
                 <li><a href="/about" class="hover:text-gray-400 p-4">About</a></li>
@@ -33,14 +35,23 @@
                 </ul>
             </div>
         </div>
-        <div class="flex justify-end">
-            <button class="bg-orange-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">Login</button>
-            <button class="lg:hidden flex justify-center w-8 h-8 bg-gray-900 hover:bg-gray-700 rounded-full">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
     </nav>
 </header>
 
+<script>
+    const header = document.querySelector('header');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.remove('bg-opacity-0');
+        } else {
+            header.classList.add('bg-opacity-0');
+        }
+    });
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>

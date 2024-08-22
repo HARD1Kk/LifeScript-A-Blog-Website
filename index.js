@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import jsonfile from 'jsonfile';
 import { v4 as uuidv4 } from 'uuid';
 
+
+
 const app = express();
 const port = 3000;
 let postedData = jsonfile.readFileSync('posts.json') || []; // read existing posts or initialize an empty array
@@ -15,9 +17,6 @@ app.use(bodyParser.json());
 
 app.set("view engine", "ejs");
 
-
-
-
 app.get('/', (req, res) => {
   try {
     res.render("index.ejs", { posts: postedData });
@@ -26,6 +25,8 @@ app.get('/', (req, res) => {
     res.status(500).send("Error");
   }
 })
+
+
 
 
 
@@ -44,11 +45,11 @@ app.get("/about", (req, res) => {
 
 app.get("/contact", (req, res) => {
   try {
-  res.render("contact.ejs")
-  } catch (error) { 
+    res.render("contact.ejs")
+  } catch (error) {
     console.error(error);
     res.status(500).send("Error: " + error.message);
-    }
+  }
 })
 
 
@@ -88,7 +89,7 @@ function generatePostId() {
 
 app.get('/post/', (req, res) => {
   try {
-    res.render("post.ejs", { posts: postedData });
+    res.render("post.ejs", { posts: postedData } );
   }
   catch (err) {
     console.error(err);
@@ -101,7 +102,6 @@ app.get('/post/', (req, res) => {
 app.get('/post/:id', (req, res) => {
 
   const postId = req.params.id;
-  // Retrieve the post data from your database or data storage
   const post = postedData.find((post) => post.id === postId);
   if (!post) {
     res.status(404).send('Post not found');
@@ -111,7 +111,24 @@ app.get('/post/:id', (req, res) => {
 
 });
 
+// delete a post 
 
+app.delete('/post/:id', (req, res) => {
+  const postId = req.params.id;
+  const index = postedData.findIndex(post => post.id === postId);
+
+  if (index === -1) {
+
+    res.status(404).json({
+      error: " we couldnt delete the post"
+    })
+  } else {
+    postedData.splice(index, 1);
+    jsonfile.writeFileSync('posts.json', postedData);
+    res.render("index.ejs", { posts: postedData });
+
+  }
+});
 
 
 
