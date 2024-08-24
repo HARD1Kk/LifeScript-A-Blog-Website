@@ -3,23 +3,21 @@
   <section
     class="bg-center bg-no-repeat bg-cover bg-fixed bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-zinc-700 bg-blend-multiply bg">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-[#f3d0a4] md:text-5xl lg:text-6xl">We
-        invest in the world’s potential</h1>
-      <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on
-        markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-[#f3d0a4] md:text-5xl lg:text-6xl"> TRAIN OF THOUGHT</h1>
+      <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Everything is Personal . Including this Blog.</p>
       <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-        <a href="#"
-          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#ac6f82] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-          Get started
+        <a href= "/post"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#ac6f82] hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-900">
+          My posts
           <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
             viewBox="0 0 14 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M1 5h12m0 0L9 1m4 4L9 9" />
           </svg>
         </a>
-        <a href="#"
+        <a href="/about"
           class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-          Learn more
+          About Me
         </a>
       </div>
     </div>
@@ -36,23 +34,21 @@
         <li class="mb-4 mr-4 w-full">
 
 
-          <img class=" rounded-t-lg  " src="https://picsum.photos/seed/<%= post.domain %>/400/200" alt="Random Image">
+          <img class=" rounded-t-lg " src="https://picsum.photos/seed/<%= post.domain %>/400/200" alt="Random Image">
 
-
+          
 
           <div class="card w-full p-4 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold mb-2">
+            <h2 class="text-2xl text-lg sm:text:sm  font-bold mb-2">
               <%= post.title %>
             </h2>
             <p class="text-gray-600 mb-2">
-              <%= post.description %>
+              <span class="inline-block bg-[#b0608d] text-white text-sm font-semibold mr-2 px-3 py-1 rounded-full"> #<%= post.domain %></span>
             </p>
-            <p class="text-gray-600 mb-4">
-              <%= post.content %>
-            </p>
+           
             <p class="text-gray-500 text-sm">
               By <%= post.fName %>
-                <%= post.lName %> on <%= post.date %>
+                <%= post.lName %> on <%= new Date().toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); %>
             </p>
             <% console.log("post id is" + post.id) %>
               <a href="/post/<%= post.id %> " class="btn btn-primary w-full">View Full Post</a>
@@ -63,36 +59,49 @@
     </ul>
     <hr />
     </br>
-    <form action="/submit" method="POST" class="max-w-md mx-auto p-4 bg-white shadow-md rounded">
+     <form action="/submit" method="POST" class="max-w-md mx-auto p-4 bg-white shadow-md rounded ">
       <h2 class="text-2xl font-bold mb-4">Create a new post</h2>
       <div class="form-group mb-4">
         <label for="title" class="block text-gray-700 text-sm mb-2">Title</label>
-        <input type="text" id="title" name="title" class="form-input w-full" placeholder="Title">
+        <input type="text" id="title" name="title" class="form-input w-full" placeholder="Title" required>
       </div>
       <div class="form-group mb-4">
         <label for="description" class="block text-gray-700 text-sm mb-2">Description</label>
-        <textarea id="description" name="description" class="form-textarea w-full" placeholder="Description"></textarea>
+        <textarea id="description" name="description" class="form-textarea w-full" placeholder="Description" required></textarea>
       </div>
       <div class="form-group mb-4">
         <label for="content" class="block text-gray-700 text-sm mb-2">Content</label>
-        <textarea id="content" name="content" class="form-textarea w-full" placeholder="Content"></textarea>
+        <textarea id="content" name="content" class="form-textarea w-full" placeholder="Content"    required> </textarea>
       </div>
       <div class="form-group mb-4">
         <label for="fName" class="block text-gray-700 text-sm mb-2">Full Name</label>
-        <input type="text" id="fName" name="fName" class="form-input w-full" placeholder="First name">
+        <input type="text" id="fName" name="fName" class="form-input w-full" placeholder="First name" required>
       </div>
 
-      <div class="form-group mb-4">
-        <label for="date" class="block text-gray-700 text-sm mb-2">Date</label>
-        <input type="date" id="date" name="date" class="form-input w-full">
-      </div>
+   
       <div class="form-group mb-4">
         <label for="domain" class="block text-gray-700 text-sm mb-2">Domain</label>
-        <input type="text" id="domain" name="domain" class="form-input w-full" placeholder="Domain">
+        <input type="text" id="domain" name="domain" class="form-input w-full" placeholder="Domain" required>
       </div>
 
       <input type="submit" value="Create Post" class="btn btn-primary w-full">
-    </form>
+    </form> 
+
+
+
+    
+
+   
+
+
+
+
+
+
+
+
+
+
   </main>
 
 

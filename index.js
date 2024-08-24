@@ -13,7 +13,7 @@ let postedData = jsonfile.readFileSync('posts.json') || []; // read existing pos
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(express.static("images"))
 
 app.set("view engine", "ejs");
 
@@ -129,10 +129,6 @@ app.delete('/post/:id', (req, res) => {
 
   }
 });
-
-
-
-
 
 
 

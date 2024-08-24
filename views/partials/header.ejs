@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,52 +7,67 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-       
 </head>
-<header class="sticky top-0 bg-[#893f71] text-black bg-opacity-0 transition duration-300 ease-in-out">
-    <nav class="container mx-auto flex justify-between ml-0 p-4 w-full">
-        <div class="text-xl font-bold p-3">
-            <a href="/">Blogzz</a>
-        </div>
-        <div class="justify-between p-3 items-center">
-            <button id="mobile-menu-button" class="lg:hidden block">
-                <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            <ul class="hidden lg:flex justify-center space-x-4">
-                <li><a href="/" class="hover:text-gray-400 p-4">Home</a></li>
-                <li><a href="/about" class="hover:text-gray-400 p-4">About</a></li>
-                <li><a href="/post" class="hover:text-gray-400 p-4">Post</a></li>
-                <li><a href="/contact" class="hover:text-gray-400 p-4">Contact</a></li>
-            </ul>
-            <div class="mobile-menu hidden">
-                <ul class="space-y-4">
-                    <li><a href="/" class="hover:text-gray-400">Home</a></li>
-                    <li><a href="/about" class="hover:text-gray-400">About</a></li>
-                    <li><a href="/post" class="hover:text-gray-400">Post</a></li>
-                    <li><a href="/contact" class="hover:text-gray-400">Contact</a></li>
+
+<body>
+    <header class="sticky top-0 bg-[#893f71] text-black bg-opacity-0 transition duration-300 ease-in-out z-50">
+        <nav class="container mx-auto flex justify-between p-1 w-full">
+            <div class="text-xl font-bold p-3" >
+                <a href="/" id="headc">Blogzz</a>
+            </div>
+            <div class="flex items-center p-3">
+                <button id="mobile-menu-button" class="lg:hidden block focus:outline-none">
+                    <svg class="w-8 h-8 fill-current text-black" alt="image not found"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <ul class=" hidden lg:flex space-x-4">
+                    <li><a href="/" id="headc" class=" hover:underline p-4">Home</a></li>
+                    <li><a href="/about" id="headc" class="hover:text-gray-400 p-4">About</a></li>
+                    <li><a href="/post" id="headc" class="hover:text-gray-400 p-4">Post</a></li>
+                    <li><a href="/contact" id="headc" class="hover:text-gray-400 p-4">Contact</a></li>
                 </ul>
             </div>
+        </nav>
+        <div class="mobile-menu hidden lg:hidden bg-[#893f71] p-4">
+            <ul class="space-y-4">
+                <li><a href="/" class="hover:text-gray-400 block">Home</a></li>
+                <li><a href="/about" class="hover:text-gray-400 block">About</a></li>
+                <li><a href="/post" class="hover:text-gray-400 block">Post</a></li>
+                <li><a href="/contact" class="hover:text-gray-400 block">Contact</a></li>
+            </ul>
         </div>
-    </nav>
-</header>
+    </header>
 
-<script>
-    const header = document.querySelector('header');
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
+    <script>
+        const header = document.querySelector('header');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const head = document.querySelectorAll('#headc');
+        console.log(head)
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.classList.remove('bg-opacity-0');
-        } else {
-            header.classList.add('bg-opacity-0');
-        }
-    });
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 85) {
+                header.classList.remove('bg-opacity-0');
+                header.classList.add('bg-opacity-100');
+                head.forEach((element) => {
+                    element.classList.add('text-white');
+                });
+            } else {
+                header.classList.add('bg-opacity-0');
+                header.classList.remove('bg-opacity-100');
+                head.forEach((element) => {
+                    element.classList.remove('text-white');
+                });
+            }
+        });
 
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

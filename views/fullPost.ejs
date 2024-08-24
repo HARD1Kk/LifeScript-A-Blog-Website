@@ -1,13 +1,44 @@
-
 <%- include("partials/header.ejs")%>
 
-<h1><%= post.title %></h1>
+<body class="bg-gray-100 text-gray-900 font-sans leading-relaxed tracking-wide">
+  <!-- Main Container -->
+  <div class="max-w-4xl mx-auto px-4 py-8">
 
-<p>Posted on <%= post.date %></p>
+      <!-- Blog Post Header -->
+      <header class="mb-8">
+          <h1 class="text-4xl  font-bold mb-4 text-center text-[#893f71]"><%=post.title %></h1>
+          <div class="flex justify-between items-center text-gray-600 text-sm">
+              <p>By <span class="font-semibold"><%=post.fName %></span></p>
+              <p>Published on <span class="font-semibold"><%= new Date().toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); %></span></p>
+          </div>
+      </header>
 
-<div>
-  <%= post.content %>
-</div>
+      <!-- Blog Image -->
+      <div class="mb-8">
+          <img src="https://picsum.photos/seed/<%= post.domain %>/800/400" alt="Nature Image" class="rounded-lg shadow-lg w-full h-auto">
+      </div>
 
+      <!-- Blog Content -->
+      <article class="prose text-justify lg:prose-lg max-w-none">
+          <p><%=post.content %></p>
 
-<%- include("partials/footer.ejs") %>~
+          </article>
+
+      <!-- Tags -->
+      <div class="mt-8 flex space-x-2">
+          <span class="inline-block bg-[#b0608d] text-white text-sm font-semibold mr-2 px-3 py-1 rounded-full">#<%=post.domain %></span>
+             </div>
+
+      <!-- Author Bio -->
+      <div class="mt-12 p-6 bg-white rounded-lg shadow-md">
+          <div class="flex items-center space-x-4">
+              <img src="https://picsum.photos/seed/<%= post.fName %>/200/200" alt="Author" class="w-20 h-20 rounded-full shadow">
+              <div>
+                  <h2 class="text-xl font-bold"><%=post.fName %></h2>
+                  <p class="text-gray-600 text-justify "><%=post.fName %> is a passionate photographer and nature lover. He enjoys capturing the beauty of the world through his lens and sharing it with others.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+<%- include("partials/footer.ejs") %>
