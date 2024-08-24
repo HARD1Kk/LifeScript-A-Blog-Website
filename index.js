@@ -8,7 +8,10 @@ import { v4 as uuidv4 } from 'uuid';
 const app = express();
 const port = 3000;
 let postedData = jsonfile.readFileSync('posts.json') || []; // read existing posts or initialize an empty array
-
+if (!postedData) {
+  jsonfile.writeFileSync('posts.json', []);
+  postedData = [];
+}
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
