@@ -1,1 +1,104 @@
-[]
+[
+    {
+        "id": "d8f4e793-9d72-4182-8b0a-5c483e4e3d41",
+        "title": "The Role of AI in Modern Web Development",
+        "description": "How AI is transforming the way we develop and maintain websites.",
+        "content": "Artificial Intelligence (AI) is increasingly being integrated into web development workflows. From AI-powered code editors that offer intelligent suggestions to chatbots that enhance user interactions, AI is making web development more efficient and user-friendly. Additionally, AI-driven testing tools can automatically identify and fix bugs, improving the overall quality of web applications. As AI continues to evolve, it will play an even more significant role in shaping the future of web development.",
+        "fName": "Hardik",
+        "domain": "AI & Web Development",
+        "date": "2024-08-05"
+    },
+    {
+        "id": "f2892b73-2ad4-4d0e-9447-8e2b3a73a573",
+        "title": "Understanding Serverless Computing",
+        "description": "A deep dive into the advantages and challenges of serverless computing.",
+        "content": "Serverless computing allows developers to focus on writing code without worrying about server management. By using serverless platforms like AWS Lambda, you can deploy functions that automatically scale based on demand, reducing the need for complex infrastructure. However, this approach also comes with challenges, such as cold start latency and potential vendor lock-in. Understanding these trade-offs is essential for deciding when to use serverless architecture in your projects.",
+        "fName": "Hardik",
+        "domain": "Cloud Computing",
+        "date": "2024-08-10"
+    },
+
+
+    
+        {
+            "id": "1",
+            "title": "The Future of Technology",
+            "description": "Exploring upcoming technological advancements and trends.",
+            "content": "In this post, we dive into the most exciting future technologies that could reshape our world, including artificial intelligence, quantum computing, and more.",
+            "fName": "Jane Doe",
+            "domain": "Technology"
+        },
+        {
+            "id": "2",
+            "title": "Travel Tips for 2024",
+            "description": "Essential advice for making the most of your travels in 2024.",
+            "content": "From finding the best travel deals to staying safe on the road, this guide offers top tips for a smooth and enjoyable journey.",
+            "fName": "John Smith",
+            "domain": "Travel"
+        },
+        {
+            "id": "3",
+            "title": "Healthy Eating Made Easy",
+            "description": "Simple strategies for maintaining a balanced diet.",
+            "content": "Learn how to make healthy eating a part of your daily routine without the stress of complicated diets. We provide practical tips and easy-to-follow recipes.",
+            "fName": "Emily Johnson",
+            "domain": "Health"
+        },
+        {
+            "id": "4",
+            "title": "Mastering the Art of Photography",
+            "description": "Tips and techniques for capturing stunning photos.",
+            "content": "Discover the secrets to taking breathtaking photographs, from understanding lighting to mastering composition and using editing tools effectively.",
+            "fName": "Michael Brown",
+            "domain": "Photography"
+        },
+        {
+            "id": "5",
+            "title": "Financial Planning for Beginners",
+            "description": "A beginner’s guide to managing personal finances.",
+            "content": "Get started with financial planning with this comprehensive guide. Learn about budgeting, saving, investing, and setting financial goals.",
+            "fName": "Sarah Davis",
+            "domain": "Finance"
+        },
+        {
+            "id": "6",
+            "title": "The Ultimate Guide to Yoga",
+            "description": "Everything you need to know about practicing yoga.",
+            "content": "Explore the physical and mental benefits of yoga, and get tips on starting your practice, finding the right classes, and incorporating yoga into your lifestyle.",
+            "fName": "David Wilson",
+            "domain": "Fitness"
+        },
+        {
+            "id": "7",
+            "title": "DIY Home Improvement Projects",
+            "description": "Creative ideas for enhancing your living space.",
+            "content": "Find inspiration for your next home improvement project with these DIY ideas. Whether you’re updating a room or adding a personal touch, we’ve got you covered.",
+            "fName": "Laura Martinez",
+            "domain": "Home Improvement"
+        },
+        {
+            "id": "8",
+            "title": "The Basics of Cryptocurrency",
+            "description": "A primer on understanding and investing in cryptocurrencies.",
+            "content": "Learn about the world of cryptocurrency, including how it works, the different types of digital currencies, and tips for investing safely.",
+            "fName": "Robert Garcia",
+            "domain": "Finance"
+        },
+        {
+            "id": "9",
+            "title": "Exploring Modern Architecture",
+            "description": "A look at the latest trends in architecture and design.",
+            "content": "Get insights into contemporary architecture styles and innovative building techniques that are defining the future of urban landscapes.",
+            "fName": "Olivia Lee",
+            "domain": "Architecture"
+        },
+        {
+            "id": "10",
+            "title": "Sustainable Living Practices",
+            "description": "How to live a more eco-friendly and sustainable life.",
+            "content": "Discover practical ways to reduce your environmental footprint, from simple lifestyle changes to larger commitments that promote sustainability.",
+            "fName": "Daniel Anderson",
+            "domain": "Lifestyle"
+        }
+    
+]
