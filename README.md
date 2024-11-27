@@ -1,6 +1,4 @@
-Certainly! Here's a revised version of your README.md without the sections on license and contributing:
 
-```markdown
 # Lifescript
 
 Lifescript is a blog posting website built with Express.js that uses JSON files for storing posts.
