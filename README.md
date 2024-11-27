@@ -22,7 +22,7 @@ To run the Lifescript project locally, follow these steps:
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-username/lifescript.git
+   git clone https://github.com/HARD1Kk/lifescript.git
    cd lifescript
 ```
 
