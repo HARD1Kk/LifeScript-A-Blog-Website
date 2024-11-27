@@ -18,16 +18,6 @@ Lifescript is a blog posting website built with Express.js that uses JSON files 
 
 ## Getting Started
 
-To run the Lifescript project locally, follow these steps:
-Sure, here's your text converted into Markdown format:
-
-
-# Lifescript
-
-Lifescript is a blog posting website built with Express.js that uses JSON files for storing posts.
-
-## Getting Started
-
 1. **Clone the repository**:
   
    git clone https://github.com/HARD1Kk/lifescript.git
