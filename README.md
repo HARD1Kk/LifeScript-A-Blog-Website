@@ -29,10 +29,10 @@ Lifescript is a blog posting website built with Express.js that uses JSON files 
 ## Getting Started
 
 1. **Clone the repository**:
-   ```sh
+  
    git clone https://github.com/HARD1Kk/lifescript.git
    cd lifescript
-```
+
 
 2.  **Install dependencies**:
     
